@@ -113,10 +113,14 @@ bindsym $mod+a focus parent
 
 
 # Startup Programs
+  exec --no-startup-id KeePass2
   exec --no-startup-id nm-applet
+  exec_always compton -f
+  exec clipit
+  exec dropbox start
   #exec --no-startup-id dunst
   #exec --no-startup-id dropbox
-exec_always --no-startup-id feh --bg-scale ~/.i3/wallpapers/wallpaper1.png
+  exec_always --no-startup-id feh --bg-scale ~/.i3/wallpapers/burj_khalifa_aka_burj_dubai-1920x1200.jpg
 
 set $workspace1 " "
 set $workspace2 " "
@@ -157,6 +161,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 assign [class="Atom"] $workspace1
 assign [class="Firefox"] $workspace2
 assign [class="Skype"] $workspace4
+assign [class="KeePass2"] $workspace4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -252,7 +257,3 @@ bindsym XF86AudioPrev exec playerctl previous
 # Fix Nautilius issue on Ubuntu
 exec_always gsettings set org.gnome.desktop.background show-desktop-icons false
 exec_always gsettings set org.nemo.desktop show-desktop-icons false
-
-exec_always compton -f
-exec clipit
-exec dropbox start
