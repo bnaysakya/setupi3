@@ -28,7 +28,7 @@ BLURTYPE="0x5" # 7.52s
 
 # Get the screenshot, add the blur and lock the screen with it
 $SCREENSHOT
-$ICON=/home/binayshakya/Desktop/images.png
+$ICON=~/Desktop/images.png
 convert $IMAGE -blur $BLURTYPE $IMAGE
 convert $IMAGE $ICON -gravity center -composite -matte $IMAGE
 i3lock -i $IMAGE -t
